@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    flex: 1;
+}
+
+nav {
+    flex: 2;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f60;
+}
+
+main {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.category {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.category h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+}
+
+.category ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category li {
+    margin: 10px 0;
+}
+
+.category li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+    padding: 0.5rem 0;
+    border-top: 1px solid #dcdcdc;
+}
+
+.category li a:hover {
+    background-color: #333;
+    color: #fff;
+    border-top: 1px solid #f60;
+}
+
+.recommend {
+    flex: 3;
+}
+
+.recommend h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.recommend ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recommend li {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+
+.recommend li:last-child {
+    margin-right: 0;
+}
+
+.recommend li a {
+    display: block;
+    height: 300px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recommend li a img {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.recommend li a p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    margin: 0;
+}
+.search-box{
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 10px;
+    padding: 5px;
+    width: 300px;
+    height: 36px;
+}
+.search-box input[type="text"]{
+    border: none;
+    flex: 1;
+    outline: none;
+}
+.search-box button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    padding: 0 10px;
+}

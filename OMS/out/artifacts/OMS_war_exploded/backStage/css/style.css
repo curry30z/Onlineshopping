@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 导航栏样式 */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+.nav-header {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.nav-menu {
+    padding: 0;
+    margin: 20px 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.nav-menu > ul > li > a:hover {
+    background-color: #333;
+}
+
+.nav-menu > ul > li > ul {
+    display: none;
+}
+
+.nav-menu > ul > li:hover > ul {
+    display: block;
+}
+
+.nav-menu > ul > li > ul > li > a {
+    display: block;
+    padding: 10px 40px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+.nav-menu > ul > li > ul > li > a:hover {
+    background-color: #333;
+}
+
+.nav-tools {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-tools ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-tools li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.nav-tools li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-left: 1px solid #333;
+}
+
+.nav-tools li:first-child a {
+    border-left: none;
+}
+
+/* 页面内容区域样式 */
+.content {
+    position: absolute;
+    top: 0;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 100%;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.content-header {
+    margin-bottom: 20px;
+}
+
+.content-header h2 {
+    margin: 0;
+}
+
+.content-body {
+    margin-bottom: 20px;
+}
+
+.content-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.content-footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}

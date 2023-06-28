@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+/* 页面布局 */
+header {
+    /* 网站logo和购物车总价等信息 */
+}
+
+main {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.cart {
+    padding: 20px;
+}
+
+/* .cart-actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+ */
+/* 购物车表格 */
+table {
+    margin: 20px 0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+td:first-child {
+    width: 5%;
+}
+
+td:nth-child(2) {
+    width: 40%;
+}
+
+td:nth-child(2) img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+td:nth-child(2) span {
+    vertical-align: middle;
+}
+
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5) {
+    width: 15%;
+}
+
+/* 购物车总价和结算按钮 */
+.cart-checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-left: 450px;
+}
+
+.total {
+    font-size: 20px;
+}
+
+.cart-total {
+    color: #d34e4e;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 8px;
+}
+
+.delete-selected-btn{
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: #1d2b38;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.checkout-btn {
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: #1d2b38;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkout-btn:hover {
+    background-color: #48a1ea;
+}
+.delete-selected-btn:hover{
+    background-color: #48a1ea;
+}
+.btn-delete{
+    font-size: 20px;
+    background-color: #1d2b38;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    th,
+    td {
+        font-size: 12px;
+    }
+
+    .checkout-btn {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+}
