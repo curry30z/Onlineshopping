@@ -176,7 +176,7 @@
   </div>
   <div class="form-group">
     <label for="total">商品总额</label>
-    <input type="text" id="total" name="total" readonly>
+    <input type="text" id="total" name="total" value="${all}" readonly>
   </div>
   <button class="submit-btn" onclick="showPaymentOverlay()">提交</button>
 </div>

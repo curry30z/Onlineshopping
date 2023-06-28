@@ -1,12 +1,15 @@
 package stage;
 
 import Dao.carDao;
+import Dao.goodsDao;
+import bean.goods;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet(name = "ServletCar", value = "/ServletCar")
 public class ServletCar extends HttpServlet {
@@ -20,6 +23,7 @@ public class ServletCar extends HttpServlet {
         String sb = request.getParameter("sb");
         String[] cids = request.getParameterValues("check");
         carDao dao= new carDao();
+        goodsDao da=new goodsDao();
         int rs = -1;
         PrintWriter out =response.getWriter();
 
@@ -48,7 +52,31 @@ public class ServletCar extends HttpServlet {
             //提交购物车到订单交互处理
             // 处理具体的逻辑
             // ...
-            return;
+            String[] goodsid=request.getParameterValues("goodsid");
+            String[] number=request.getParameterValues("number");
+            double all=0;
+            for(int i=0;i<goodsid.length;i++) {
+                List<goods> list = da.SelectGoodsById(Integer.parseInt(goodsid[i]));
+                goods gs = list.get(0);
+                int n = Integer.parseInt(number[i]);
+                if (gs.getAmount() < n) {
+                    out.print("   <script>alert('"+gs.getName()+"库存数量不足');window.location.href='stage/car.jsp' </script> ");
+                    return;
+                }
+                all+=(gs.getPrice()*gs.getDiscount()*n);
+
+            }
+
+            HttpSession session=request.getSession();
+            session.setAttribute("all",all);
+            out.print("   <script>window.location.href='stage/pay.jsp' </script> ");
+
+
+
+
+
+
+
         } else if ("".equals(sb) || sb == null || cids == null || cids.length == 0) {
             //进行单个删除
             int id= Integer.parseInt(request.getParameter("id"));

@@ -49,17 +49,19 @@
                     </td>
                     <td> <span  class="price">¥${car.price*car.discount}</span></td>
                     <td>
-                        <input type="number" min="1" value="${car.amount}" data-id="${car.id}">
+                        <input name="number" type="number" min="1" value="${car.amount}" data-id="${car.id}">
                     </td>
 
                     <td>
-                        <span class="subtotal"></span>
+                        <span class="subtotal" ></span>
                     </td>
                     <td>
-                        <button class="btn-delete" data-id="${car.id}">
+                        <button class="btn-delete" data-id="${car.id}" >
                             <a href="${pageContext.request.contextPath}/ServletCar?id=${car.id}&&userid=${car.userid}">删除</a> </button>
                     </td>
+                    <input type="hidden" name="goodsid" value="${car.goodsid}">
                 </tr>
+
             </c:forEach>
 
             <!-- 商品列表，每个商品一行，包括商品名称、价格、数量、小计和操作按钮 -->
@@ -69,7 +71,7 @@
         <div class="cart-checkout">
             <div class="total">
                 <span>总计：</span>
-                <span id="cartTotal" class="cart-total">0.00</span>
+                <span id="cartTotal" class="cart-total" >0.00</span>
             </div>
             <button class="delete-selected-btn"type="submit" name="sb" value="delete">批量删除</button>
             <button class="checkout-btn" type="submit" name="sb" value="next">结算</button>

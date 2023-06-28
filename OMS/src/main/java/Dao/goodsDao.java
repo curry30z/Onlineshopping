@@ -215,7 +215,7 @@ public class goodsDao {
 
         List<goods> list= db.genericQuery(sql,params, goods.class);
 
-        db.closeConnection(db.getConn());
+
 
         return list;
     }
